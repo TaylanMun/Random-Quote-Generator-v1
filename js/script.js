@@ -94,7 +94,7 @@ function getRandomRGBColor() {
 
 window.onload = () => {
   printQuote();
-  setInterval(() => printQuote(), 4000);
+  setInterval(() => printQuote(), 10000);
 };
 
 
