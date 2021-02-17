@@ -92,9 +92,14 @@ function getRandomRGBColor() {
   return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 }
 
+
+/***
+ * Functions will work when the window on load, 
+***/
+
 window.onload = () => {
   printQuote();
-  setInterval(() => printQuote(), 10000);
+  setInterval(printQuote, 10000);
 };
 
 
