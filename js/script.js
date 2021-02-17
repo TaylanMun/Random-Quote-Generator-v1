@@ -72,6 +72,7 @@ function printQuote(){
     saidTo = `( to ${randomQuote["saidto"]})`;
   }
   if(randomQuote){
+    document.body.style.backgroundColor = getRandomRGBColor();
     return document.getElementById("quote-box").innerHTML = `
     <p class="quote">${randomQuote["quote"]}</p>
     <p class="source">
@@ -83,7 +84,19 @@ function printQuote(){
   }
 }
 
-printQuote();
+/***
+ * `getRandomRGBColor` function
+***/
+
+function getRandomRGBColor() {
+  return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+}
+
+window.onload = () => {
+  printQuote();
+  setInterval(() => printQuote(), 4000);
+};
+
 
 /***
  * click event listener for the print quote button
